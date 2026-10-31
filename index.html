@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>CareFlow | Project Management</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/api.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/modules/initiation.js"></script>
+  <script defer src="js/modules/scope.js"></script>
+  <script defer src="js/modules/schedule.js"></script>
+  <script defer src="js/modules/cost.js"></script>
+  <script defer src="js/modules/quality.js"></script>
+  <script defer src="js/modules/dashboard.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#dashboard" aria-label="CareFlow dashboard">
+        <span class="brand-mark">✚</span>
+        <span><strong>careflow</strong><small>PROJECT OFFICE</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span>Dashboard</button>
+        <button class="nav-item" data-view="initiation"><span class="nav-icon">◈</span>Initiation &amp; integration</button>
+        <button class="nav-item" data-view="scope"><span class="nav-icon">⌘</span>Scope &amp; WBS</button>
+        <button class="nav-item" data-view="schedule"><span class="nav-icon">▤</span>Schedule &amp; resources</button>
+        <button class="nav-item" data-view="cost"><span class="nav-icon">◉</span>Cost &amp; earned value</button>
+        <button class="nav-item" data-view="quality"><span class="nav-icon">◇</span>Quality &amp; risk</button>
+      </nav>
+      <div class="sidebar-project">
+        <span class="project-dot"></span><span><small>ACTIVE PROJECT</small><strong>Smart Healthcare</strong></span>
+      </div>
+      <div class="sidebar-footer">HEALTHCARE DELIVERY <span>•</span> 2026</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">✚</span><strong>careflow</strong></div>
+        <div class="breadcrumb"><span>Projects</span><span class="crumb-divider">/</span><strong id="page-breadcrumb">Dashboard</strong></div>
+        <div class="topbar-actions">
+          <span class="project-tag"><span class="project-dot"></span> Smart Healthcare PMIS</span>
+        </div>
+      </header>
+
+      <div id="app-content" class="content-area">
+        <section class="view-section active" id="view-dashboard" aria-label="Dashboard"></section>
+        <section class="view-section" id="view-initiation" aria-label="Project initiation and integration"></section>
+        <section class="view-section" id="view-scope" aria-label="Scope management and WBS"></section>
+        <section class="view-section" id="view-schedule" aria-label="Schedule and resource management"></section>
+        <section class="view-section" id="view-cost" aria-label="Cost management and earned value"></section>
+        <section class="view-section" id="view-quality" aria-label="Quality management and risk control"></section>
+      </div>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <dialog id="app-dialog" class="app-dialog"><div id="dialog-content"></div></dialog>
+</body>
+</html>
